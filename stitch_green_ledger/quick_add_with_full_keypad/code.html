@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quick Add Transaction | Command Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#90f9a3",
+                        "on-primary-container": "#0b5800",
+                        "on-tertiary": "#005d62",
+                        "on-secondary-container": "#e4ffe2",
+                        "surface": "#0e0e0e",
+                        "primary-fixed-dim": "#2be800",
+                        "error-dim": "#d53d18",
+                        "error": "#ff7351",
+                        "on-error": "#450900",
+                        "on-error-container": "#ffd2c8",
+                        "outline-variant": "#494847",
+                        "on-primary": "#0d6100",
+                        "primary": "#8eff71",
+                        "primary-container": "#2ff801",
+                        "on-tertiary-container": "#005458",
+                        "surface-container-low": "#131313",
+                        "surface-container-highest": "#262626",
+                        "surface-container-high": "#201f1f",
+                        "surface-container": "#1a1919",
+                        "on-surface-variant": "#adaaaa",
+                        "on-surface": "#ffffff",
+                        "background": "#0e0e0e",
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-grid {
+            background-image:
+                linear-gradient(to right, rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .bioluminescent-glow {
+            box-shadow: 0 0 20px rgba(142, 255, 113, 0.15);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body overflow-hidden">
+<div class="fixed inset-0 kinetic-grid opacity-30 z-0"></div>
+<div class="relative min-h-screen flex flex-col filter blur-md pointer-events-none scale-[0.98]">
+<header class="bg-[#0e0e0e]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full z-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img alt="User" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXRZl4ZlutC1ZjbQmpewuYKNEULfANp6aAOQysuoinqHwnKT0zRmpFqwibFx26FbWKMUsTeyTrjyFft8SJDoPtzklaTFyLevmGRUyM418mY8qvHzkJP7h6RM8Q6od1ucQTHT2bfnw3zbvRtt4pRGza03YOIFra2jsWlUqy8mEFZakCAj-n3D-K5_YzSSd-4mcL6C92QQDcMsoNFH5p7cZeMP96ritP1W8htGllqc07vBPd7snMvo-3ssgCn3QEZS3NMtOHBJsaxcCm"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline uppercase tracking-widest text-sm text-[#39FF14]">COMMAND_CENTER</span>
+<span class="text-[10px] text-on-surface-variant font-bold">OPERATOR: ALEX_VANCE</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#39FF14]">notifications</span>
+</header>
+<main class="flex-1 px-6 pt-8">
+<div class="mb-8">
+<p class="font-headline text-on-surface-variant text-xs tracking-widest uppercase mb-1">Total Balance</p>
+<h1 class="font-headline text-5xl font-bold tracking-tighter text-on-surface">$ 42,890.00</h1>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-high p-4 rounded-xl border-l-2 border-primary">
+<p class="text-[10px] uppercase text-on-surface-variant font-bold mb-2">Income</p>
+<p class="text-xl font-headline text-primary">+$ 12,400</p>
+</div>
+<div class="bg-surface-container-high p-4 rounded-xl border-l-2 border-error">
+<p class="text-[10px] uppercase text-on-surface-variant font-bold mb-2">Expenses</p>
+<p class="text-xl font-headline text-error">-$ 8,120</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">shopping_cart</span>
+</div>
+<div>
+<p class="font-bold text-sm">Supermarket Apex</p>
+<p class="text-xs text-on-surface-variant">Grocery • 2:45 PM</p>
+</div>
+</div>
+<span class="font-headline text-error">-$ 124.00</span>
+</div>
+</div>
+</main>
+</div>
+<div class="fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"></div>
+<section class="fixed bottom-0 left-0 right-0 bg-surface-container flex flex-col z-50 rounded-t-[2.5rem] border-t border-primary/10 overflow-hidden h-[90%] max-h-[795px]">
+<div class="px-6 pt-4 pb-2">
+<div class="w-10 h-1 bg-outline-variant/20 rounded-full mx-auto mb-4"></div>
+<div class="flex items-center justify-between gap-4">
+<div class="flex-1 bg-surface-container-highest/50 rounded-full p-1 flex">
+<button class="flex-1 py-1.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest transition-all bg-error/10 text-error border border-error/30">Spent</button>
+<button class="flex-1 py-1.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant/50">Got</button>
+</div>
+<button class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+<div class="px-8 text-center border-b border-outline-variant/10">
+<div class="flex items-end justify-center gap-1">
+<span class="text-primary font-headline text-3xl mb-2">$</span>
+<span class="text-7xl font-headline font-bold text-on-surface tracking-tight">0.00</span>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar">
+<div class="px-6 py-4 grid grid-cols-4 gap-4">
+<button class="aspect-square rounded-2xl bg-primary/10 border-2 border-primary flex flex-col items-center justify-center gap-2 group shadow-[0_0_15px_rgba(57,255,20,0.1)]">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="text-[9px] font-black uppercase text-primary">Food</span>
+</button>
+<button class="aspect-square rounded-2xl bg-surface-container-highest border border-outline-variant/20 flex flex-col items-center justify-center gap-2 group active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary">commute</span>
+<span class="text-[9px] font-black uppercase text-on-surface-variant">Transp</span>
+</button>
+<button class="aspect-square rounded-2xl bg-surface-container-highest border border-outline-variant/20 flex flex-col items-center justify-center gap-2 group active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary">shopping_bag</span>
+<span class="text-[9px] font-black uppercase text-on-surface-variant">Shop</span>
+</button>
+<button class="aspect-square rounded-2xl bg-surface-container-highest border border-outline-variant/20 flex flex-col items-center justify-center gap-2 group active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary">local_mall</span>
+<span class="text-[9px] font-black uppercase text-on-surface-variant">Groc</span>
+</button>
+<button class="aspect-square rounded-2xl bg-surface-container-highest border border-outline-variant/20 flex flex-col items-center justify-center gap-2 group active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary">home</span>
+<span class="text-[9px] font-black uppercase text-on-surface-variant">Rent</span>
+</button>
+<button class="aspect-square rounded-2xl bg-surface-container-highest border border-outline-variant/20 flex flex-col items-center justify-center gap-2 group active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary">theater_comedy</span>
+<span class="text-[9px] font-black uppercase text-on-surface-variant">Ent</span>
+</button>
+<button class="aspect-square rounded-2xl bg-surface-container-highest border border-outline-variant/20 flex flex-col items-center justify-center gap-2 group active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary">health_and_safety</span>
+<span class="text-[9px] font-black uppercase text-on-surface-variant">Health</span>
+</button>
+<button class="aspect-square rounded-2xl bg-surface-container-highest border border-outline-variant/20 flex flex-col items-center justify-center gap-2 group active:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary">more_horiz</span>
+<span class="text-[9px] font-black uppercase text-on-surface-variant">Other</span>
+</button>
+</div>
+<div class="px-6 mb-4">
+<button class="w-full bg-surface-container-highest/30 border border-outline-variant/20 rounded-xl py-3 px-4 flex items-center justify-between group active:border-primary/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary text-xl">calendar_today</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Date</span>
+</div>
+<span class="text-sm font-headline text-on-surface">Today</span>
+</button>
+</div>
+</div>
+<div class="bg-black/40 backdrop-blur-md pb-10 pt-4 border-t border-outline-variant/10">
+<div class="grid grid-cols-4 gap-2 px-4">
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">7</button>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">8</button>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">9</button>
+<button class="h-14 rounded-xl bg-surface-container-highest/60 flex items-center justify-center text-error active:bg-error/20 transition-colors">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">4</button>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">5</button>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">6</button>
+<div class="h-14"></div>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">1</button>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">2</button>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">3</button>
+<div class="h-14"></div>
+<button class="h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">.</button>
+<button class="col-span-2 h-14 rounded-xl bg-surface-container-highest/40 flex items-center justify-center font-headline text-2xl font-light active:bg-primary/20 transition-colors">0</button>
+<div class="h-14"></div>
+<button class="col-span-4 h-16 mt-2 rounded-2xl bg-primary flex items-center justify-center gap-3 active:scale-[0.98] transition-all shadow-[0_0_25px_rgba(57,255,20,0.35)]">
+<span class="material-symbols-outlined text-black text-3xl font-bold">done_all</span>
+<span class="text-sm text-black font-black uppercase tracking-[0.2em]">Add Transaction</span>
+</button>
+</div>
+</div>
+</section>
+<nav class="fixed bottom-0 w-full z-[60] bg-[#0e0e0e]/95 backdrop-blur-md border-t border-primary/5">
+<div class="flex justify-around items-center w-full px-2 pb-6 pt-3">
+<a class="flex flex-col items-center gap-1 text-zinc-600" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium text-[10px] uppercase">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary bg-[#262626] rounded-md px-3 py-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-medium text-[10px] uppercase">Expenses</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-600" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-medium text-[10px] uppercase">Ledger</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-600" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="font-medium text-[10px] uppercase">Trading</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-600" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-medium text-[10px] uppercase">Stats</span>
+</a>
+</div>
+</nav>
+
+</body></html>

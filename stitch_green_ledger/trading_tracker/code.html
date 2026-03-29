@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC COMMAND | Trading Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#fcf8f8",
+              "surface-container-lowest": "#000000",
+              "tertiary-dim": "#00deea",
+              "secondary-container": "#006d2f",
+              "on-secondary": "#005f28",
+              "primary-container": "#2ff801",
+              "primary-dim": "#2be800",
+              "tertiary": "#88f6ff",
+              "on-primary": "#0d6100",
+              "surface-variant": "#262626",
+              "secondary-fixed-dim": "#82ea96",
+              "on-secondary-container": "#e4ffe2",
+              "inverse-primary": "#106f00",
+              "surface-container-highest": "#262626",
+              "background": "#0e0e0e",
+              "tertiary-fixed-dim": "#00deea",
+              "on-tertiary-container": "#005458",
+              "on-tertiary-fixed-variant": "#005e63",
+              "tertiary-fixed": "#17eefa",
+              "secondary": "#90f9a3",
+              "secondary-dim": "#82ea96",
+              "surface-container-high": "#201f1f",
+              "surface-container-low": "#131313",
+              "error-dim": "#d53d18",
+              "error-container": "#b92902",
+              "surface-dim": "#0e0e0e",
+              "secondary-fixed": "#90f9a3",
+              "error": "#ff7351",
+              "on-primary-container": "#0b5800",
+              "on-error-container": "#ffd2c8",
+              "outline-variant": "#494847",
+              "on-primary-fixed": "#064200",
+              "on-secondary-fixed-variant": "#006a2e",
+              "surface-bright": "#2c2c2c",
+              "on-background": "#ffffff",
+              "tertiary-container": "#17eefa",
+              "on-error": "#450900",
+              "on-primary-fixed-variant": "#0d6200",
+              "surface": "#0e0e0e",
+              "on-surface-variant": "#adaaaa",
+              "on-surface": "#ffffff",
+              "on-tertiary-fixed": "#003f43",
+              "inverse-on-surface": "#565554",
+              "primary-fixed": "#2ff801",
+              "surface-container": "#1a1919",
+              "outline": "#777575",
+              "on-tertiary": "#005d62",
+              "primary-fixed-dim": "#2be800",
+              "surface-tint": "#8eff71",
+              "primary": "#8eff71",
+              "on-secondary-fixed": "#004a1e"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #0e0e0e; color: #ffffff; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glow-primary { filter: drop-shadow(0 0 8px rgba(142, 255, 113, 0.4)); }
+        .condensed-header { font-stretch: 75%; letter-spacing: -0.05em; }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-24">
+<header class="w-full top-0 sticky z-50 bg-[#0e0e0e] dark:bg-[#0e0e0e] shadow-[0_0_15px_rgba(142,255,113,0.1)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLAhj15Q1HzX2B-QVa8C03ucjwQoGLg5_YEKp5lBTMmoRS7W9jrgknWrJ-im3qx9wvKQX2lO2zpSy59XKvEXOUuEQ3WlWC84aA2vADcg8Zn80fCQ6ss6s0Nak9vY9rC719uogMGxAk9UxWg0E3GIhhMQh0NSUcMk59k8pWez98QY0of-bFWsnPePhlCyLRD3F1P1o8ViUrMC0AYAPkBMJHep2N7lKdpjZjnMfLm5-U1E69k5yI63jOm2O5CHxLc4pQ738h38g9T1Ny"/>
+</div>
+<h1 class="text-[#8eff71] font-black tracking-tighter italic text-xl font-headline uppercase">KINETIC_COMMAND</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 font-['Space_Grotesk'] uppercase tracking-widest text-sm font-bold">
+<a class="text-[#494847] hover:text-white transition-all" href="#">DASHBOARD</a>
+<a class="text-[#494847] hover:text-white transition-all" href="#">EXPENSES</a>
+<a class="text-[#8eff71]" href="#">TRADING</a>
+<a class="text-[#494847] hover:text-white transition-all" href="#">STATS</a>
+</nav>
+<button class="material-symbols-outlined text-[#8eff71] active:scale-95 duration-150 p-2 rounded-lg hover:bg-[#262626]">swap_horiz</button>
+</div>
+</div>
+<div class="bg-[#131313] h-[2px] w-full"></div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-6">
+<section class="mb-8">
+<div class="bg-surface-container-low border border-outline-variant/10 rounded-xl overflow-hidden shadow-lg">
+<div class="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-outline-variant/10">
+<div class="p-4 bg-surface-container-high flex items-center justify-between min-w-[220px]">
+<div class="flex flex-col">
+<span class="text-primary font-headline text-[10px] tracking-[0.2em] uppercase font-bold">Terminal / Performance</span>
+<h2 class="text-on-surface font-headline text-lg font-extrabold tracking-tighter italic">MONTHLY STATS</h2>
+</div>
+<div class="text-right">
+<span class="text-on-surface-variant text-[9px] uppercase tracking-widest block font-bold">Oct 2023</span>
+</div>
+</div>
+<div class="flex-1 grid grid-cols-2 md:grid-cols-4 items-center">
+<div class="p-4 flex flex-col items-center border-r border-outline-variant/10 md:border-r-0">
+<span class="text-on-surface-variant text-[10px] font-bold tracking-widest uppercase mb-1">Start</span>
+<span class="text-on-surface font-headline font-bold text-lg">$42,500</span>
+</div>
+<div class="p-4 flex flex-col items-center border-r border-outline-variant/10 md:border-r-0">
+<span class="text-on-surface-variant text-[10px] font-bold tracking-widest uppercase mb-1">End</span>
+<span class="text-on-surface font-headline font-bold text-lg">$58,920</span>
+</div>
+<div class="p-4 flex flex-col items-center bg-primary/5 border-r border-outline-variant/10 md:border-r-0">
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase mb-1">Profit</span>
+<span class="text-primary font-headline font-black text-lg">+$16,420</span>
+</div>
+<div class="p-4 flex flex-col items-center bg-primary/10">
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase mb-1">Growth</span>
+<span class="text-primary font-headline font-black text-xl italic">38.6%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="max-w-4xl mx-auto">
+<div class="flex justify-between items-center mb-6">
+<div class="flex items-center gap-3">
+<h3 class="font-headline font-bold text-3xl tracking-tighter uppercase italic text-on-surface condensed-header">Trade Log</h3>
+<button class="flex items-center justify-center w-10 h-10 bg-primary rounded-full shadow-[0_0_15px_rgba(142,255,113,0.4)] active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-on-primary font-bold">add</span>
+</button>
+</div>
+<div class="flex gap-2">
+<button class="text-[10px] font-bold px-3 py-1 bg-surface-container-highest border border-outline-variant/20 text-on-surface-variant uppercase tracking-widest">Filter</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="group bg-surface-container-low hover:bg-surface-container-high transition-all p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-primary/10">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Date</span>
+<span class="font-headline font-bold text-on-surface">OCT 24</span>
+</div>
+<div class="w-[2px] h-8 bg-outline-variant/20"></div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Assets</span>
+<span class="font-headline font-medium text-on-surface">BTC / USDT</span>
+</div>
+</div>
+<div class="flex items-center gap-12 text-right">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Net %</span>
+<span class="font-headline font-bold text-primary">+4.2%</span>
+</div>
+<div class="flex flex-col min-w-[100px]">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Profit/Loss</span>
+<span class="font-headline font-black text-primary text-lg">+ $2,420.00</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+</div>
+<div class="group bg-surface-container-low hover:bg-surface-container-high transition-all p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-primary/10">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Date</span>
+<span class="font-headline font-bold text-on-surface">OCT 23</span>
+</div>
+<div class="w-[2px] h-8 bg-outline-variant/20"></div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Assets</span>
+<span class="font-headline font-medium text-on-surface">ETH / USDT</span>
+</div>
+</div>
+<div class="flex items-center gap-12 text-right">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Net %</span>
+<span class="font-headline font-bold text-error">-1.8%</span>
+</div>
+<div class="flex flex-col min-w-[100px]">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Profit/Loss</span>
+<span class="font-headline font-black text-error text-lg">- $840.12</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+</div>
+<div class="group bg-surface-container-low hover:bg-surface-container-high transition-all p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-primary/10">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Date</span>
+<span class="font-headline font-bold text-on-surface">OCT 22</span>
+</div>
+<div class="w-[2px] h-8 bg-outline-variant/20"></div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Assets</span>
+<span class="font-headline font-medium text-on-surface">SOL / USDT</span>
+</div>
+</div>
+<div class="flex items-center gap-12 text-right">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Net %</span>
+<span class="font-headline font-bold text-primary">+12.4%</span>
+</div>
+<div class="flex flex-col min-w-[100px]">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Profit/Loss</span>
+<span class="font-headline font-black text-primary text-lg">+ $4,890.30</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+</div>
+<div class="group bg-surface-container-low hover:bg-surface-container-high transition-all p-5 rounded-xl flex items-center justify-between border border-transparent hover:border-primary/10">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Date</span>
+<span class="font-headline font-bold text-on-surface">OCT 21</span>
+</div>
+<div class="w-[2px] h-8 bg-outline-variant/20"></div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Assets</span>
+<span class="font-headline font-medium text-on-surface">AAPL / NASDAQ</span>
+</div>
+</div>
+<div class="flex items-center gap-12 text-right">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Net %</span>
+<span class="font-headline font-bold text-primary">+0.8%</span>
+</div>
+<div class="flex flex-col min-w-[100px]">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Profit/Loss</span>
+<span class="font-headline font-black text-primary text-lg">+ $320.00</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-4 bg-surface-container-low border border-dashed border-outline-variant/30 text-on-surface-variant font-headline font-bold uppercase tracking-[0.3em] hover:bg-surface-container-high transition-all">
+            Load_Previous_Entries
+        </button>
+</div>
+</main>
+<nav class="md:hidden fixed bottom-0 w-full z-50 border-t border-[#494847]/15 bg-[#0e0e0e]/90 backdrop-blur-xl flex justify-around items-center h-20 px-4 pb-safe shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col items-center justify-center text-[#494847]">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Space_Grotesk'] font-bold text-[10px] tracking-widest mt-1">DASHBOARD</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#494847]">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Space_Grotesk'] font-bold text-[10px] tracking-widest mt-1">EXPENSES</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#8eff71] drop-shadow-[0_0_8px_rgba(142,255,113,0.6)] scale-110">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">show_chart</span>
+<span class="font-['Space_Grotesk'] font-bold text-[10px] tracking-widest mt-1">TRADING</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#494847]">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-['Space_Grotesk'] font-bold text-[10px] tracking-widest mt-1">STATS</span>
+</div>
+</nav>
+
+</body></html>

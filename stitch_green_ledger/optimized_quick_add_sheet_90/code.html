@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Command Center - Quick Add</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#17eefa",
+              "surface-dim": "#0e0e0e",
+              "surface-container": "#1a1919",
+              "inverse-primary": "#106f00",
+              "secondary-dim": "#82ea96",
+              "error": "#ff7351",
+              "on-primary-container": "#0b5800",
+              "tertiary-fixed-dim": "#00deea",
+              "primary-fixed-dim": "#2be800",
+              "background": "#0e0e0e",
+              "on-surface": "#ffffff",
+              "tertiary-container": "#17eefa",
+              "secondary-container": "#006d2f",
+              "surface-container-highest": "#262626",
+              "inverse-on-surface": "#565554",
+              "surface-tint": "#8eff71",
+              "on-tertiary-fixed-variant": "#005e63",
+              "on-tertiary-container": "#005458",
+              "on-error-container": "#ffd2c8",
+              "tertiary-dim": "#00deea",
+              "on-secondary-fixed-variant": "#006a2e",
+              "surface": "#0e0e0e",
+              "on-background": "#ffffff",
+              "secondary": "#90f9a3",
+              "surface-container-low": "#131313",
+              "on-error": "#450900",
+              "tertiary": "#88f6ff",
+              "primary": "#8eff71",
+              "on-primary-fixed": "#064200",
+              "outline-variant": "#494847",
+              "error-container": "#b92902",
+              "primary-fixed": "#2ff801",
+              "on-secondary-container": "#e4ffe2",
+              "on-tertiary": "#005d62",
+              "primary-container": "#2ff801",
+              "on-secondary": "#005f28",
+              "on-tertiary-fixed": "#003f43",
+              "surface-variant": "#262626",
+              "on-primary-fixed-variant": "#0d6200",
+              "on-surface-variant": "#adaaaa",
+              "on-secondary-fixed": "#004a1e",
+              "inverse-surface": "#fcf8f8",
+              "secondary-fixed-dim": "#82ea96",
+              "secondary-fixed": "#90f9a3",
+              "surface-container-lowest": "#000000",
+              "outline": "#777575",
+              "surface-bright": "#2c2c2c",
+              "on-primary": "#0d6100",
+              "primary-dim": "#2be800",
+              "surface-container-high": "#201f1f",
+              "error-dim": "#d53d18"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .neon-glow {
+        box-shadow: 0 0 15px rgba(142, 255, 113, 0.15);
+      }
+      .bioluminescent-btn {
+        background: linear-gradient(135deg, #8eff71 0%, #2ff801 100%);
+      }
+      .kinetic-grid {
+        background-image: 
+            linear-gradient(to right, rgba(142, 255, 113, 0.05) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(142, 255, 113, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .glow-text-primary {
+        text-shadow: 0 0 8px rgba(142, 255, 113, 0.6);
+      }
+      .kinetic-gradient {
+        background: linear-gradient(135deg, #8eff71 0%, #2ff801 100%);
+      }
+      @keyframes slide-up {
+        from { transform: translateY(100%); }
+        to { transform: translateY(0); }
+      }
+      .animate-slide-up {
+        animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body select-none overflow-hidden">
+<!-- Background Dashboard (Home Dashboard Content) -->
+<div class="fixed inset-0 z-0 flex flex-col kinetic-grid opacity-100 transition-all duration-500">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 py-4 w-full bg-[#0e0e0e] shadow-[0_0_15px_rgba(142,255,113,0.1)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArdGWiMlcZxwTx34h4XrIstjpognkRh6znKzFS4Z2_S_nUhUEl3EF7-qh8kC1mUCQVvM4MLVcmGj2BnmVhxXlcLC3Lz039SV12PBDUdhMVLCV2dbvhzdGuE-4tWXLvs8fn8lu30mCuiusloy0SLv0DvZS6WQZwf0aUpdvbnNZb66lSo3_IImyjQGT7R5WbIsvF9xN5qz1-fO-aYekEK-x1FPx96tpytzKpK0lufc9Q3b3qNAc2Onk2fwL-QCvCJ9Ej4eOS-jaWFdGZ"/>
+</div>
+<span class="text-[#8eff71] font-black tracking-tighter italic text-xl uppercase">NAME</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined" style="color: #39FF14; text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);">swap_horiz</span>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-8 pb-32 space-y-8 w-full">
+<!-- Hero Section -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low p-8 border border-outline-variant/10">
+<div class="absolute top-0 right-0 w-64 h-64 kinetic-gradient opacity-5 blur-[100px] -mr-32 -mt-32"></div>
+<div>
+<p class="font-headline uppercase tracking-widest text-sm text-primary mb-2">Total Balance</p>
+<h1 class="font-headline font-black tracking-tighter text-on-surface glow-text-primary text-5xl">$142,850<span class="text-primary/50">.42</span></h1>
+<div class="flex items-center mt-4 gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="text-sm font-label uppercase">+12.4% THIS MONTH</span>
+</div>
+</div>
+</section>
+<!-- Account Cards -->
+<section class="grid grid-cols-1 gap-6">
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/5">
+<div class="flex justify-between items-start mb-8">
+<div class="p-3 bg-surface-container-highest rounded-lg text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant font-bold tracking-widest uppercase">Primary Ledger</span>
+</div>
+<div>
+<p class="font-headline text-on-surface-variant text-xs uppercase tracking-widest mb-1">Cash Account</p>
+<p class="font-headline text-3xl font-bold">$42,300.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-10 border-t border-[#494847]/15 bg-[#0e0e0e]/90 flex justify-around items-center h-20 px-4 pb-safe">
+<div class="flex flex-col items-center justify-center text-[#8eff71] drop-shadow-[0_0_8px_rgba(142,255,113,0.6)]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-headline font-bold text-[10px] tracking-widest mt-1">DASHBOARD</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#494847]">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-headline font-bold text-[10px] tracking-widest mt-1">EXPENSES</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#494847]">
+<span class="material-symbols-outlined">show_chart</span>
+<span class="font-headline font-bold text-[10px] tracking-widest mt-1">TRADING</span>
+</div>
+</nav>
+</div>
+<!-- Overlay Screen (Quick Add Bottom Sheet) -->
+<div class="fixed inset-0 z-50 flex flex-col justify-end">
+<!-- Backdrop Dimmer with extremely subtle blur -->
+<div class="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
+<!-- Bottom Sheet Container (Adjusted to 90vh) -->
+<div class="relative w-full h-[90vh] bg-surface-container-low rounded-t-[2.5rem] border-t border-primary/30 shadow-[0_-15px_50px_rgba(0,0,0,0.9)] px-6 pt-3 pb-8 flex flex-col animate-slide-up">
+<!-- Handle Bar -->
+<div class="w-12 h-1 bg-outline-variant rounded-full mx-auto mb-4 opacity-40"></div>
+<!-- Header: Compressed slightly -->
+<div class="flex justify-between items-center mb-4">
+<div>
+<span class="font-headline text-primary text-[9px] uppercase tracking-[0.2em] font-bold">Transaction Engine</span>
+<h2 class="font-headline text-xl font-black text-on-surface tracking-tight uppercase">Quick Add</h2>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar flex flex-col">
+<!-- Amount Input Area: More compact vertical spacing, prominent bold text -->
+<div class="mb-4 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="text-primary font-headline text-[10px] font-bold mb-0 uppercase tracking-[0.15em]">Enter Amount</span>
+<div class="flex items-baseline gap-1">
+<span class="text-primary font-headline text-3xl font-bold">$</span>
+<input class="bg-transparent border-none text-center font-headline text-6xl font-black text-on-surface focus:ring-0 w-full tracking-tighter glow-text-primary" readonly="" type="text" value="0.00"/>
+</div>
+</div>
+</div>
+<!-- Category Selector: Reduced vertical padding and spacing -->
+<div class="mb-6">
+<span class="block font-headline text-[9px] text-on-surface-variant uppercase tracking-[0.2em] font-bold mb-3">Select Classification</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="flex items-center gap-2 p-3 bg-surface-container-high rounded-xl border border-transparent hover:border-primary/40 transition-all group text-left">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface uppercase tracking-wider">Cash</span>
+</button>
+<button class="flex items-center gap-2 p-3 bg-surface-container-highest rounded-xl border border-primary/60 shadow-[0_0_10px_rgba(142,255,113,0.1)] transition-all text-left">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">language</span>
+</div>
+<span class="font-headline font-bold text-xs text-primary uppercase tracking-wider">Online</span>
+</button>
+<button class="flex items-center gap-2 p-3 bg-surface-container-high rounded-xl border border-transparent hover:border-primary/40 transition-all group text-left">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">call_received</span>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface uppercase tracking-wider">Loan In</span>
+</button>
+<button class="flex items-center gap-2 p-3 bg-surface-container-high rounded-xl border border-transparent hover:border-primary/40 transition-all group text-left">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">call_made</span>
+</div>
+<span class="font-headline font-bold text-xs text-on-surface uppercase tracking-wider">Loan Out</span>
+</button>
+</div>
+</div>
+<!-- Numeric Keypad: Compressed gap to ensure visibility -->
+<div class="grid grid-cols-3 gap-y-4 gap-x-8 mb-4 px-8 mt-auto">
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">1</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">2</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">3</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">4</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">5</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">6</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">7</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">8</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">9</button>
+<button class="h-10 text-xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">.</button>
+<button class="h-10 text-2xl font-headline font-bold text-on-surface hover:text-primary active:scale-90 transition-transform">0</button>
+<button class="h-10 text-on-surface-variant hover:text-error flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-2xl">backspace</span>
+</button>
+</div>
+</div>
+<!-- Sticky Action Button: Lower margin -->
+<div class="mt-4">
+<button class="w-full h-14 bioluminescent-btn rounded-xl flex items-center justify-center gap-2 shadow-[0_8px_30px_rgba(142,255,113,0.3)] hover:brightness-110 active:scale-[0.98] transition-all">
+<span class="font-headline font-black text-on-primary tracking-[0.2em] text-sm uppercase">Add Transaction</span>
+<span class="material-symbols-outlined text-on-primary text-xl">bolt</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GreenLedger - Create Your Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#ffffff",
+              "tertiary": "#88f6ff",
+              "on-error": "#450900",
+              "surface-dim": "#0e0e0e",
+              "on-primary-fixed": "#064200",
+              "surface-container-lowest": "#000000",
+              "inverse-on-surface": "#565554",
+              "primary-dim": "#2be800",
+              "tertiary-fixed-dim": "#00deea",
+              "on-tertiary-fixed-variant": "#005e63",
+              "outline": "#777575",
+              "on-tertiary-container": "#005458",
+              "error-dim": "#d53d18",
+              "primary-fixed-dim": "#2be800",
+              "surface": "#0e0e0e",
+              "on-tertiary-fixed": "#003f43",
+              "tertiary-fixed": "#17eefa",
+              "surface-variant": "#262626",
+              "on-secondary-fixed": "#004a1e",
+              "on-surface-variant": "#adaaaa",
+              "inverse-primary": "#106f00",
+              "surface-container-low": "#131313",
+              "primary-container": "#2ff801",
+              "outline-variant": "#494847",
+              "surface-container-high": "#201f1f",
+              "secondary-fixed": "#90f9a3",
+              "surface-container-highest": "#262626",
+              "surface-container": "#1a1919",
+              "on-primary-fixed-variant": "#0d6200",
+              "error-container": "#b92902",
+              "on-secondary-container": "#e4ffe2",
+              "secondary-container": "#006d2f",
+              "inverse-surface": "#fcf8f8",
+              "on-tertiary": "#005d62",
+              "primary": "#8eff71",
+              "background": "#0e0e0e",
+              "secondary-fixed-dim": "#82ea96",
+              "on-secondary": "#005f28",
+              "error": "#ff7351",
+              "on-secondary-fixed-variant": "#006a2e",
+              "secondary": "#90f9a3",
+              "primary-fixed": "#2ff801",
+              "on-error-container": "#ffd2c8",
+              "secondary-dim": "#82ea96",
+              "on-primary-container": "#0b5800",
+              "surface-tint": "#8eff71",
+              "on-primary": "#0d6100",
+              "tertiary-container": "#17eefa",
+              "on-surface": "#ffffff",
+              "tertiary-dim": "#00deea",
+              "surface-bright": "#2c2c2c"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .kinetic-grid {
+            background-image: 
+                linear-gradient(to right, rgba(142, 255, 113, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(142, 255, 113, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<div class="relative min-h-screen flex flex-col kinetic-grid overflow-hidden">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky flex items-center justify-between px-6 py-4 bg-[#0e0e0e] bg-gradient-to-b from-[#131313] to-transparent z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance_wallet" style="">account_balance_wallet</span>
+<h1 class="text-2xl font-bold tracking-[0.1em] text-[#39FF14] drop-shadow-[0_0_8px_rgba(57,255,20,0.5)] font-headline" style="">GreenLedger</h1>
+</div>
+<div class="hidden md:flex gap-6">
+<span class="text-on-surface-variant font-label text-xs tracking-widest uppercase" style="">Securing Your Assets</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col items-center justify-center px-6 py-12 relative z-10 max-w-2xl mx-auto w-full">
+<!-- Hero Section -->
+<div class="w-full mb-10 text-center">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight mb-4" style="">Create Your Profile</h2>
+<p class="text-on-surface-variant text-base max-w-md mx-auto" style="">Welcome to GreenLedger. Set up your identity to begin managing your assets with confidence.</p>
+</div>
+<!-- Form Container -->
+<div class="w-full space-y-6">
+<!-- Full Name Field -->
+<div class="bg-surface-container-high p-6 rounded-2xl border border-outline-variant/10 focus-within:border-primary focus-within:shadow-[0_0_20px_rgba(142,255,113,0.15)] transition-all duration-300">
+<label class="block text-primary font-label text-[11px] uppercase tracking-widest mb-3 font-bold" style="">Full Name</label>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant/50" data-icon="person" style="">person</span>
+<input class="bg-transparent border-none p-0 w-full focus:ring-0 text-xl font-headline font-medium placeholder:text-outline/20 text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Age Field -->
+<div class="bg-surface-container-high p-6 rounded-2xl border border-outline-variant/10 focus-within:border-primary focus-within:shadow-[0_0_20px_rgba(142,255,113,0.15)] transition-all duration-300">
+<label class="block text-primary font-label text-[11px] uppercase tracking-widest mb-3 font-bold" style="">Age</label>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant/50" data-icon="calendar_today" style="">calendar_today</span>
+<input class="bg-transparent border-none p-0 w-full focus:ring-0 text-xl font-headline font-medium placeholder:text-outline/20 text-on-surface" placeholder="25" type="number"/>
+</div>
+</div>
+<!-- Gender Selection -->
+<div class="bg-surface-container-high p-6 rounded-2xl border border-outline-variant/10 transition-all">
+<label class="block text-primary font-label text-[11px] uppercase tracking-widest mb-3 font-bold" style="">Gender</label>
+<div class="flex gap-2">
+<button class="flex-1 py-3 rounded-lg bg-primary text-on-primary font-label text-xs font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(142,255,113,0.3)] transition-all" style="">Male</button>
+<button class="flex-1 py-3 rounded-lg bg-surface-container-highest text-on-surface-variant font-label text-xs font-bold uppercase tracking-wider hover:text-primary transition-colors" style="">Female</button>
+<button class="flex-1 py-3 rounded-lg bg-surface-container-highest text-on-surface-variant font-label text-xs font-bold uppercase tracking-wider hover:text-primary transition-colors" style="">Other</button>
+</div>
+</div>
+</div><!-- Currency Selection -->
+<div class="bg-surface-container-high p-6 rounded-2xl border border-outline-variant/10 transition-all">
+<label class="block text-primary font-label text-[11px] uppercase tracking-widest mb-3 font-bold">Currency</label>
+<div class="flex flex-wrap gap-2">
+<button class="flex-1 min-w-[70px] py-3 rounded-lg bg-primary text-on-primary font-label text-xs font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(142,255,113,0.3)] transition-all">USD</button>
+<button class="flex-1 min-w-[70px] py-3 rounded-lg bg-surface-container-highest text-on-surface-variant font-label text-xs font-bold uppercase tracking-wider hover:text-primary transition-colors">EUR</button>
+<button class="flex-1 min-w-[70px] py-3 rounded-lg bg-surface-container-highest text-on-surface-variant font-label text-xs font-bold uppercase tracking-wider hover:text-primary transition-colors">CNY</button><button class="flex-1 min-w-[70px] py-3 rounded-lg bg-surface-container-highest text-on-surface-variant font-label text-xs font-bold uppercase tracking-wider hover:text-primary transition-colors">JPY</button><button class="flex-1 min-w-[70px] py-3 rounded-lg bg-surface-container-highest text-on-surface-variant font-label text-xs font-bold uppercase tracking-wider hover:text-primary transition-colors">RUB</button>
+<button class="flex-1 min-w-[70px] py-3 rounded-lg bg-surface-container-highest text-on-surface-variant font-label text-xs font-bold uppercase tracking-wider hover:text-primary transition-colors">INR</button>
+</div>
+</div>
+</div>
+<!-- Primary Action -->
+<div class="mt-12 w-full max-w-md">
+<button class="group relative w-full bg-primary hover:bg-primary-dim p-[2px] rounded-xl transition-all duration-300 shadow-[0_10px_30px_rgba(47,248,1,0.2)] active:scale-[0.98]" style="">
+<div class="bg-background group-hover:bg-primary transition-all duration-300 py-5 px-8 rounded-xl flex items-center justify-center gap-3">
+<span class="text-primary group-hover:text-on-primary font-headline text-lg font-bold tracking-wider uppercase" style="">Get Started</span>
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-transform group-hover:translate-x-1" data-icon="arrow_forward" style="">arrow_forward</span>
+</div>
+</button>
+<p class="mt-6 text-center text-on-surface-variant font-label text-[11px] uppercase tracking-widest opacity-60" style="">
+                    Your data is encrypted and stored securely.
+                </p>
+</div>
+</main>
+<!-- Dynamic Background Elements -->
+<div class="absolute top-1/4 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+<!-- Clean Footer -->
+<div class="w-full text-center text-[10px] font-label text-on-surface-variant uppercase tracking-widest opacity-40 mb-4">Created by Pratyay Hazra</div><footer class="mt-auto py-8 px-6 flex justify-center items-center gap-8 text-[10px] font-label text-on-surface-variant uppercase tracking-widest opacity-40">
+<span class="" style="">© 2026 GreenLedger</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span>
+<span class="" style="">Privacy Policy</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary/30"></span>
+<span class="" style="">Terms of Service</span>
+</footer>
+</div>
+<!-- Hidden Image Data -->
+<div class="hidden">
+<img class="" data-alt="abstract liquid metallic surface with neon green light reflections in a dark futuristic environment with deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbu-9VS7UER6OGfldzowqNT93unN7saFKO22mnIVumnKQzyB57LoRx44riXWhBBCjJoDFRq7gJYU2ivafWE5BUqV4MXWcmbIVKOnXkN-P9MhqNRWxhiZHzC3VwLe3yHYsORAGTKu6LRmOvcG5UBpzwD7uQS-g8vdS6BgvcBIZtJa7VbbVi-4xD6rZ8furkCAxQPfRqTto8WmFvaLcr7m4IlHvFbEKchTUsdEwmtX4xMRzxtqXogbTyH88BhG0gc43mC4t-YagyY-eM" style=""/>
+</div>
+</body></html>

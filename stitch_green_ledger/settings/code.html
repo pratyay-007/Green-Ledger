@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#131313",
+              "tertiary-fixed": "#17eefa",
+              "on-surface-variant": "#adaaaa",
+              "surface-container-lowest": "#000000",
+              "surface-container": "#1a1919",
+              "on-tertiary": "#005d62",
+              "on-tertiary-fixed-variant": "#005e63",
+              "outline": "#777575",
+              "background": "#0e0e0e",
+              "secondary-fixed-dim": "#82ea96",
+              "on-secondary-container": "#e4ffe2",
+              "secondary-container": "#006d2f",
+              "inverse-surface": "#fcf8f8",
+              "surface-variant": "#262626",
+              "secondary": "#90f9a3",
+              "inverse-on-surface": "#565554",
+              "tertiary-fixed-dim": "#00deea",
+              "primary-fixed-dim": "#2be800",
+              "error-container": "#b92902",
+              "on-error": "#450900",
+              "error-dim": "#d53d18",
+              "tertiary": "#88f6ff",
+              "on-secondary-fixed": "#004a1e",
+              "primary": "#8eff71",
+              "on-tertiary-container": "#005458",
+              "tertiary-container": "#17eefa",
+              "on-background": "#ffffff",
+              "surface-bright": "#2c2c2c",
+              "surface-container-highest": "#262626",
+              "outline-variant": "#494847",
+              "on-primary": "#0d6100",
+              "primary-fixed": "#2ff801",
+              "on-tertiary-fixed": "#003f43",
+              "surface-container-high": "#201f1f",
+              "surface-tint": "#8eff71",
+              "primary-dim": "#2be800",
+              "on-error-container": "#ffd2c8",
+              "inverse-primary": "#106f00",
+              "secondary-fixed": "#90f9a3",
+              "tertiary-dim": "#00deea",
+              "secondary-dim": "#82ea96",
+              "on-secondary": "#005f28",
+              "on-surface": "#ffffff",
+              "surface-dim": "#0e0e0e",
+              "on-primary-fixed-variant": "#0d6200",
+              "on-primary-fixed": "#064200",
+              "on-secondary-fixed-variant": "#006a2e",
+              "primary-container": "#2ff801",
+              "error": "#ff7351",
+              "surface": "#0e0e0e",
+              "on-primary-container": "#0b5800"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-grid {
+            background-image: radial-gradient(circle at 2px 2px, #262626 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glow-primary {
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.15);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary min-h-screen kinetic-grid">
+<header class="bg-[#131313] w-full top-0 sticky z-40 shadow-[0_0_15px_rgba(57,255,20,0.1)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPIL0kFU1ZrfnqGjnEiIGIelqXhz33vFSZxOy9NQSNieNtErCufZo0DsWTSg2dT0PgbsbZ5ggKaFBGeyjn01KQetcsHV4m9Kt-Jg9VWrjth0SkJefKEXS9CwIHuUiRY4DjYDj3jGnrZ-JUt7KLJxwWI4EYwsMwRtTxvKRWuSdujshAwyzklfpuELJ90R7ZqymtABp3iD6rlm7wHsM55_gj1QZWU3nLlid3cNryGZlzeHV6iHWli_slub5gdjl6JTFaiVLFpU0yXEzl"/>
+</div>
+<h1 class="font-['Space_Grotesk'] font-bold tracking-tighter text-[#39FF14] uppercase">NAME</h1>
+</div>
+<div class="text-[#39FF14] hover:text-[#39FF14] transition-colors duration-200 active:scale-95 cursor-pointer">
+<span class="material-symbols-outlined">sync_alt</span>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-6 pt-8 pb-32 space-y-12">
+<section class="relative">
+<div class="flex flex-col md:flex-row items-end justify-between gap-6 border-b border-outline-variant/10 pb-8">
+<div class="space-y-2">
+<p class="font-label text-primary text-sm tracking-widest uppercase">System Core</p>
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter leading-none">Settings</h2>
+</div>
+<div class="hidden md:block text-right">
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-[0.2em]">Protocol Version</p>
+<p class="font-headline text-primary font-bold text-xl">v2.0.8-GL</p>
+</div>
+</div>
+</section>
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary"></span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-widest text-on-surface">Account Settings</h3>
+</div>
+<div class="bg-surface-container-high rounded-lg overflow-hidden border border-outline-variant/10">
+<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="space-y-0.5">
+<label class="block font-label text-[10px] text-on-surface-variant uppercase tracking-[0.15em]">Display Identity</label>
+<span class="font-headline text-lg text-on-surface">Alex Mercer</span>
+</div>
+<button class="text-primary hover:scale-110 transition-transform p-2">
+<span class="material-symbols-outlined text-[20px]">edit_square</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="space-y-0.5">
+<label class="block font-label text-[10px] text-on-surface-variant uppercase tracking-[0.15em]">Cycle Count (Age)</label>
+<span class="font-headline text-lg text-on-surface">32</span>
+</div>
+<button class="text-primary hover:scale-110 transition-transform p-2">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-5 border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="space-y-0.5">
+<label class="block font-label text-[10px] text-on-surface-variant uppercase tracking-[0.15em]">Bio-Classification</label>
+<span class="font-headline text-lg text-on-surface">Non-Binary</span>
+</div>
+<button class="text-primary hover:scale-110 transition-transform p-2">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-5 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="space-y-0.5">
+<label class="block font-label text-[10px] text-on-surface-variant uppercase tracking-[0.15em]">Primary Currency</label>
+<span class="font-headline text-lg text-on-surface">USD ($)</span>
+</div>
+<button class="text-primary hover:scale-110 transition-transform p-2">
+<span class="material-symbols-outlined text-[20px]">currency_exchange</span>
+</button>
+</div>
+</div>
+</section>
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary"></span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-widest text-on-surface">Security</h3>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/10 p-8 rounded-xl flex items-center justify-between">
+<div class="space-y-1">
+<h4 class="font-headline text-2xl font-bold text-on-surface">App PIN Lock</h4>
+<p class="font-body text-on-surface-variant">Secure your financial data with biometric and numeric encryption</p>
+</div>
+<button class="relative inline-flex h-8 w-14 items-center rounded-full bg-primary/20 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background group">
+<span class="sr-only">Toggle PIN Lock</span>
+<span class="inline-block h-6 w-6 transform rounded-full bg-primary transition-transform translate-x-7 shadow-[0_0_10px_rgba(142,255,113,0.5)]"></span>
+</button>
+</div>
+</section>
+<section class="space-y-6 pb-12">
+<div class="flex items-center gap-4">
+<span class="w-8 h-[1px] bg-primary"></span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-widest text-on-surface">Data Management</h3>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-high hover:bg-surface-container-highest p-6 rounded-lg border-l-4 border-primary flex items-center justify-between transition-all duration-300 cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-primary/10 rounded-md">
+<span class="material-symbols-outlined text-primary">download</span>
+</div>
+<span class="font-headline font-bold text-xl uppercase tracking-widest text-primary">Export Data</span>
+</div>
+<span class="material-symbols-outlined text-primary">arrow_forward_ios</span>
+</div>
+<div class="bg-surface-container-high hover:bg-surface-container-highest p-6 rounded-lg flex items-center justify-between transition-all duration-300 cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-surface-variant rounded-md">
+<span class="material-symbols-outlined text-on-surface">upload</span>
+</div>
+<span class="font-headline font-bold text-xl uppercase tracking-widest text-on-surface">Import Data</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward_ios</span>
+</div>
+<div class="bg-error/5 hover:bg-error/10 p-6 rounded-lg border border-error/20 flex items-center justify-between transition-all duration-300 cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-error/10 rounded-md">
+<span class="material-symbols-outlined text-error">delete_forever</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-headline font-bold text-xl uppercase tracking-widest text-error">Delete All Data &amp; Reset</span>
+<p class="text-error/60 text-xs font-label uppercase">Warning: Irreversible clearance</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-error group-hover:translate-x-1 transition-transform">dangerous</span>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-6 px-4 bg-[#131313]/90 backdrop-blur-xl border-t border-[#494847]/15 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] z-50 rounded-t-lg">
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-medium tracking-widest">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-medium tracking-widest">Expenses</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-medium tracking-widest">Ledger</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-medium tracking-widest">Trading</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#39FF14] drop-shadow-[0_0_8px_rgba(57,255,20,0.5)] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase font-medium tracking-widest">Settings</span>
+</a>
+</nav>
+
+</body></html>
